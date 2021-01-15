@@ -5,4 +5,4 @@ python -m http.server
 
 # autres 
 live-server 
-parcel
+parcel# memoire
