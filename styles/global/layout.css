@@ -1,38 +1,39 @@
 @media print {
-  
+
   /* réglages du livre */
   @page {
-    size: 148mm 210mm;
+    height: 225mm;
+    width: 175mm ;
     margin-top: 100px;
-    margin-bottom: 65px; 
+    margin-bottom: 65px;
   }
-  
+
   /* réglages des pages */
-  
+
   /* page de droite */
   @page :right {
-    margin-left: 20mm;
+    margin-left: 45mm;
     margin-right: 20mm;
-    
+
     /* folio */
-    
+
     @top-left-corner {
       content: counter(page);
       vertical-align: top;
-      padding-top: 25px; 
+      padding-top: 25px;
     }
-    
+
     @top-left {
       content: 'titre du chapitre';
       vertical-align: top;
-      padding-top: 25px; 
+      padding-top: 25px;
       padding-left: 50px;
-    } 
+    }
   }
 
   /* page de gauche */
   @page :left {
-    margin-left: 20mm;
+    margin-left: 45mm;
     margin-right: 20mm;
 
     /* folio */
@@ -40,57 +41,60 @@
       content: counter(page);
       padding-left: 5mm;
       vertical-align: top;
-      padding-top: 25px; }
+      padding-top: 25px;
+    }
 
     /* titre haut de page */
     @top-right {
       content: 'titre du livre';
       vertical-align: top;
-      padding-top: 25px; 
+      padding-top: 25px;
       padding-right: 50px;
-    } 
+    }
   }
 
-  
+
   /* saut de pages */
-  
+
   .chapter h1 {
     break-before: always;
   }
 
-  .chapter p {
+  .chapter section {
     break-after: always;
   }
 
   figure {
-    break-inside: avoid; 
+    break-inside: avoid;
   }
 
   /* pages blanches */
   @page :blank {
-  
+
     @top-left-corner {
-      content: none; 
+      content: none;
     }
-  
+
     @top-left {
-      content: none; 
+      content: none;
     }
-  
+
     @top-right-corner {
-      content: none; 
+      content: none;
     }
-  
+
     @top-right {
-      content: none; } 
+      content: none;
     }
-  
+  }
+
   /* micro typo (ne fonctionne que dans chrome) expé */
   .chapter p {
     widows: 3;
-    orphans: 3; 
+    orphans: 3;
   }
- 
+
   p {
-    hyphens: auto; 
+    hyphens: auto;
   }
+}

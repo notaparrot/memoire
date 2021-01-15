@@ -1,34 +1,46 @@
 :root {
   font-size: 16px;
-  --baseline: 22px; 
+  --baseline: 22px;
 }
 
 * {
-  font-size: 1rem;
-  font-family: sans-serif;
+  font-size: 12pt;
+  font-family: "IBM Plex Serif";
   line-height: 22px;
   margin: 0;
-  padding: 0; }
+  padding: 0; 
+}
 
 .chapter h1 {
-  font-size: 2rem;
+  
+  font-family: "IBM Plex Sans SemiBold";
+  font-size: 28pt;
   line-height: var(--baseline);
   margin-bottom: 12px;
   margin-top: calc(var(--baseline)*6);
-  margin-bottom: calc(var(--baseline)*2); }
+  margin-bottom: calc(var(--baseline)*2);
+}
+
+.cite {
+  font-family: "IBM Plex Mono Light";
+  letter-spacing: -0.05em;
+  margin-left: 20mm;
+  font-style: italic;
 }
 
 p {
-  text-align: left; 
+  text-align: left;
+  margin-bottom: 3mm;
 }
 
 img {
   width: 100%;
-  height: 100%;
+  height: 75vh;
 }
 
 @media screen {
   body {
     max-width: 70vw;
-    padding-left: 15vw; 
+    padding-left: 15vw;
+  }
 }
