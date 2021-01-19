@@ -4,11 +4,12 @@
 }
 
 * {
-  font-size: 12pt;
+  font-size: 13pt;
   font-family: "IBM Plex Serif";
   line-height: 22px;
   margin: 0;
-  padding: 0; 
+  padding: 0;  
+  word-break: keep-all;
 }
 
 .chapter h1 {
@@ -21,21 +22,50 @@
   margin-bottom: calc(var(--baseline)*2);
 }
 
+/* Définit une variable pour récupérer les noms de chapitres */
+h1 { 
+  string-set: title content(text);
+  /* Bon sang pourquoi le nom de chapitre en haut ne veut pas prendre une font spécifique ? */
+  font-family: "IBM Plex Sans";
+}
+
+
 .cite {
   font-family: "IBM Plex Mono Light";
   letter-spacing: -0.05em;
   margin-left: 20mm;
   font-style: italic;
+  
+  /* Ceci est un test de mise en page de citation */
+  break-before: always;
+  padding-top: 80px;
+}
+
+.after-cite {
+  break-before: always;
 }
 
 p {
   text-align: left;
   margin-bottom: 3mm;
+
 }
 
 img {
-  width: 100%;
-  height: 75vh;
+  width: 80%;
+  height: 80%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img_description {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen {
