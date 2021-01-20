@@ -12,7 +12,7 @@
 
   /* page de droite */
   @page :right {
-    margin-left: 45mm;
+    margin-left: 55mm;
     margin-right: 20mm;
 
     /* folio */
@@ -23,6 +23,7 @@
       vertical-align: top;
       padding-top: 25px;
       right: 25mm;
+      font-size: 13pt;
     }
     
     @top-left {
@@ -31,13 +32,14 @@
       vertical-align: top;
       padding-top: 25px;
       padding-left: 25px;
-      right:25mm;
+      right: 25mm;
+      font-size: 13pt;
     }
   }
 
   /* page de gauche */
   @page :left {
-    margin-left: 45mm;
+    margin-left: 55mm;
     margin-right: 20mm;
 
     /* folio */
@@ -46,6 +48,7 @@
       vertical-align: top;
       padding-top: 25px;
       float: right;
+      font-size: 13pt;
     }
 
     /* titre haut de page */
@@ -53,12 +56,17 @@
       content: "Derrière l'écran";
       vertical-align: top;
       padding-top: 25px;
-      padding-right: 25px;
+      padding-right: 25px;   
+      font-size: 13pt;
     }
   }
 
 
   /* saut de pages */
+  /* attention, cette partie peut porter à confusion ! */
+  section {
+    break-after:always;
+  }
 
   .chapter h1 {
     break-before: right;
@@ -71,18 +79,19 @@
   /* pages blanches */
   @page :blank {
 
+    
     @top-left-corner {
       content: none;
     }
-
+    
     @top-left {
       content: none;
     }
-
+    
     @top-right-corner {
       content: none;
     }
-
+    
     @top-right {
       content: none;
     }

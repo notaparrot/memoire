@@ -4,12 +4,12 @@
 }
 
 * {
-  font-size: 13pt;
-  font-family: "IBM Plex Serif";
   line-height: 22px;
   margin: 0;
   padding: 0;  
   word-break: keep-all;
+  font-family: "IBM Plex Sans Light";
+
 }
 
 .chapter h1 {
@@ -24,21 +24,20 @@
 
 /* Définit une variable pour récupérer les noms de chapitres */
 h1 { 
-  string-set: title content(text);
-  /* Bon sang pourquoi le nom de chapitre en haut ne veut pas prendre une font spécifique ? */
-  font-family: "IBM Plex Sans";
+  string-set: title content(text);  
 }
-
 
 .cite {
   font-family: "IBM Plex Mono Light";
   letter-spacing: -0.05em;
-  margin-left: 20mm;
   font-style: italic;
+  /* ces marges visent à centrer la citation sur la page. relatif aux marges générales */
+  margin-left: -15mm;
+  margin-right: 10mm;
   
   /* Ceci est un test de mise en page de citation */
   break-before: always;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 }
 
 .after-cite {
@@ -48,7 +47,9 @@ h1 {
 p {
   text-align: left;
   margin-bottom: 3mm;
-
+  
+  font-size: 13pt;
+  font-family: "IBM Plex Sans";
 }
 
 img {
@@ -62,15 +63,43 @@ img {
   margin-right: auto;
 }
 
-.img_description {
+.description {
+  text-align: right;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  font-family: "IBM Plex Sans Light";
+  
 }
 
 @media screen {
   body {
     max-width: 70vw;
-    padding-left: 15vw;
+    padding-left: 10vw;
   }
+}
+
+/* MARGIN NOTES STYLE */
+
+.margin-note {
+  font-family: "IBM Plex Sans";
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  color: #2aa700;
+  padding-top: 3px;
+  margin-bottom: 14px;
+  padding-left: 18mm;
+  padding-right: 5mm;
+}
+
+.note-call_margin-note {
+  font-family: "IBM Plex Sans";
+  color: #2aa700;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.note-marker_margin-note {
+  font-weight: 600;
 }
