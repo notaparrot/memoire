@@ -6,6 +6,10 @@
     width: 175mm;
     margin-top: 100px;
     margin-bottom: 65px;
+
+    /* Pourquoi les guides d'impressions n'apapraissent ils pas ?  */
+    bleed: 6mm;
+    marks: crop cross;
   }
 
 
