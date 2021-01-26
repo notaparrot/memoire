@@ -1,105 +1,135 @@
-:root {
-  font-size: 16px;
-  --baseline: 22px;
-}
-
-* {
-  line-height: 22px;
-  margin: 0;
-  padding: 0;  
-  word-break: keep-all;
-  font-family: "IBM Plex Sans Light";
-
-}
-
-.chapter h1 {
-  
-  font-family: "IBM Plex Sans SemiBold";
-  font-size: 28pt;
-  line-height: var(--baseline);
-  margin-bottom: 12px;
-  margin-top: calc(var(--baseline)*6);
-  margin-bottom: calc(var(--baseline)*2);
-}
-
-/* Définit une variable pour récupérer les noms de chapitres */
-h1 { 
-  string-set: title content(text);  
-}
-
-.cite {
-  font-family: "IBM Plex Mono Light";
-  letter-spacing: -0.05em;
-  font-style: italic;
-  /* ces marges visent à centrer la citation sur la page. relatif aux marges générales */
-  margin-left: -15mm;
-  margin-right: 10mm;
-  
-  /* Ceci est un test de mise en page de citation */
-  break-before: always;
-  /* padding-top: 80px; */
-}
-
-.after-cite {
-  break-before: always;
-}
-
-p {
-  text-align: left;
-  margin-bottom: 3mm;
-  
-  font-size: 13pt;
-  font-family: "IBM Plex Sans";
-}
-
-img {
-  width: 80%;
-  height: 80%;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.description {
-  text-align: right;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "IBM Plex Sans Light";
-  
-}
-
-@media screen {
-  body {
-    max-width: 70vw;
-    padding-left: 10vw;
+  :root {
+    font-size: 16px;
+    --baseline: 22px;
   }
-}
 
-/* MARGIN NOTES STYLE */
+  @media screen {
+    body {
+      max-width: 70vw;
+      padding-left: 10vw;
+    }
+  }
 
-.margin-note {
-  font-family: "IBM Plex Sans";
-  font-size: 12px;
-  line-height: 14px;
-  text-align: left;
-  color: #2aa700;
-  padding-top: 3px;
-  margin-bottom: 14px;
-  padding-left: 18mm;
-  padding-right: 5mm;
-}
+  * {
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+    font-family: "IBM Plex Sans Light";
 
-.note-call_margin-note {
-  font-family: "IBM Plex Sans";
-  color: #2aa700;
-  font-size: 12px;
-  font-weight: 600;
-}
+  }
 
-.note-marker_margin-note {
-  font-weight: 600;
-}
+  /*------------------------------------TITRES DE CHAPITRES---------------------------*/
+
+  .chapter h1 {
+
+    font-family: "IBM Plex Sans SemiBold";
+    font-size: 28pt;
+    line-height: var(--baseline);
+    margin-bottom: 12px;
+    margin-top: calc(var(--baseline)*6);
+    margin-bottom: calc(var(--baseline)*2);
+  }
+
+  /* Définit une variable pour récupérer les noms de chapitres */
+  h1 {
+    string-set: title content(text);
+  }
+
+  /*------------------------------------CORPS DE TEXTE---------------------------*/
+
+  p {
+    text-align: left;
+    margin-bottom: 3mm;
+
+    font-size: 13pt;
+    font-family: "IBM Plex Sans";
+  }
+
+  /*------------------------------------CITATIONS---------------------------*/
+
+  .cite {
+    font-family: "IBM Plex Mono Light";
+    letter-spacing: -0.05em;
+    font-style: italic;
+    /* ces marges visent à centrer la citation sur la page. relatif aux marges générales */
+    margin-left: -10mm;
+    margin-right: 15mm;
+
+    /* Ceci est un test de mise en page de citation */
+    break-before: always;
+    /* padding-top: 80px; */
+  }
+
+  .after-cite {
+    break-before: always;
+  }
+
+  /*------------------------------------IMAGES---------------------------*/
+  .img-in-text {
+    /* différence de marge gauche pour centrer l'image. A comparer aux marges declarées dans layout.css */
+    margin-left: -10mm;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  .img-full-page {
+    page: no-margin-layout;
+  }
+
+  @page no-margin-layout {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+  }
+
+  .img-full-page-child {
+    /* object fit contain ne fonctionne pas pour une raison obscure */
+    object-fit: cover ;
+    text-align: center;
+    height: var(--pagedjs-pagebox-height);
+    max-width: 100%;
+  }
+
+  #img_01 {
+    width: 80%;
+    height: 80%;
+  }
+
+  .description {
+    /* style de la description */
+    text-align: right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "IBM Plex Sans Light";
+  }
+
+
+  /*------------------------------------MARGIN NOTES STYLE---------------------------*/
+
+  .margin-note {
+    font-family: "IBM Plex Sans";
+    font-size: 12pt;
+    line-height: 14px;
+    text-align: left;
+    color: #2aa700;
+    padding-top: 3px;
+    margin-bottom: 14px;
+    padding-left: 18mm;
+    padding-right: 5mm;
+  }
+
+  .note-call_margin-note {
+    font-family: "IBM Plex Sans";
+    color: #2aa700;
+    font-size: 12pt;
+    font-weight: 600;
+  }
+
+  .note-marker_margin-note {
+    font-weight: 600;
+  }
