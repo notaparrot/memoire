@@ -2,8 +2,7 @@
 
   /* réglages du livre */
   @page {
-    height: 225mm;
-    width: 175mm;
+    size: 175mm 225mm;
     margin-top: 100px;
     margin-bottom: 65px;
 
@@ -27,8 +26,9 @@
       content: counter(page);
       vertical-align: top;
       padding-top: 25px;
-      right: 25mm;
       font-size: 13pt;
+      /* décale par rapport à la marge gauche */
+      margin-left: -35mm;
     }
     
     @top-left {
@@ -37,8 +37,9 @@
       vertical-align: top;
       padding-top: 25px;
       padding-left: 25px;
-      right: 25mm;
       font-size: 13pt;
+      /* décale par rapport à la marge gauche */
+      margin-left: -35mm;
     }
   }
 

@@ -29,12 +29,24 @@
     margin-bottom: 12px;
     margin-top: calc(var(--baseline)*6);
     margin-bottom: calc(var(--baseline)*2);
-  }
 
+  }
   /* Définit une variable pour récupérer les noms de chapitres */
   h1 {
     string-set: title content(text);
   }
+  
+  /* Cette partie est à décommenter pour supprimer les titres miniatures
+  Ne fonctionne pas dans l'etat actuel à cause des break-before .chapter h1 // voir layout.css */
+
+  /* .chapter {
+    page: chapter;  
+  }
+  @page chapter:first {
+    @top-left {
+      content: "";
+    }
+  } */
 
   /*------------------------------------CORPS DE TEXTE---------------------------*/
 
@@ -112,7 +124,7 @@
   /*------------------------------------MARGIN NOTES STYLE---------------------------*/
 
   .margin-note {
-    font-family: "IBM Plex Sans";
+    font-family: "IBM Plex Sans Light";
     font-size: 12pt;
     line-height: 14px;
     text-align: left;
@@ -120,16 +132,15 @@
     padding-top: 3px;
     margin-bottom: 14px;
     padding-left: 18mm;
-    padding-right: 5mm;
+    padding-right: 3mm;
   }
 
   .note-call_margin-note {
-    font-family: "IBM Plex Sans";
+    font-family: "IBM Plex Sans Light";
     color: #2aa700;
     font-size: 12pt;
-    font-weight: 600;
   }
 
   .note-marker_margin-note {
-    font-weight: 600;
+    font-family: "IBM Plex Sans Light";
   }
