@@ -25,7 +25,7 @@
 
     font-family: "IBM Plex Sans SemiBold";
     font-size: 28pt;
-    line-height: var(--baseline);
+    line-height: 95%;
     margin-bottom: 12px;
     margin-top: calc(var(--baseline)*6);
     margin-bottom: calc(var(--baseline)*2);
@@ -56,8 +56,10 @@
 
     font-size: 13pt;
     font-family: "IBM Plex Sans";
-  }
 
+    text-indent:20px;
+  }
+  
   /*------------------------------------CITATIONS---------------------------*/
 
   .cite {
@@ -69,8 +71,12 @@
     margin-right: 15mm;
 
     /* Ceci est un test de mise en page de citation */
-    break-before: always;
+    /* break-before: always; */
     /* padding-top: 80px; */
+  }
+
+  .break-cite{
+    break-before: always;
   }
 
   .after-cite {
