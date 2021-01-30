@@ -30,6 +30,7 @@
     margin-top: calc(var(--baseline)*6);
     margin-bottom: calc(var(--baseline)*2);
 
+    margin-left: -70px;
   }
   /* Définit une variable pour récupérer les noms de chapitres */
   h1 {
@@ -39,12 +40,12 @@
   /* Cette partie est à décommenter pour supprimer les titres miniatures
   Ne fonctionne pas dans l'etat actuel à cause des break-before .chapter h1 // voir layout.css */
 
-  /* .chapter {
-    page: chapter;  
+  /* .no-top-title h1{
+    page: no-top-title;
   }
-  @page chapter:first {
+  @page no-top-title {
     @top-left {
-      content: "";
+      content: none;
     }
   } */
 
@@ -102,6 +103,20 @@
     margin-top: 0px;
     margin-bottom: 0px;
 
+    @top-right {
+      content: none;
+    }
+    @top-right-corner {
+      content:none;
+    }
+
+    @top-left-corner {
+content:none;
+    }
+
+    @top-left {
+content:none;
+    }
   }
 
   .img-full-page-child {
