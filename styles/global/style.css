@@ -40,8 +40,7 @@
 
   /* Cette partie est à décommenter pour supprimer les titres miniatures
   Ne fonctionne pas dans l'etat actuel à cause des break-before .chapter h1 // voir layout.css */
-
-  /* .no-top-title h1{
+  /* section > h1{
     page: no-top-title;
   }
   @page no-top-title {
@@ -96,39 +95,50 @@
 
   .img-full-page {
     page: no-margin-layout;
-  }
-
-  @page no-margin-layout {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-
-    @top-right {
-      content: none;
-    }
-
-    @top-right-corner {
-      content: none;
-    }
-
-    @top-left-corner {
-      content: none;
-    }
-
-    @top-left {
-      content: none;
-    }
-  }
-
-  .img-full-page-child {
-    /* object fit contain ne fonctionne pas pour une raison obscure */
     object-fit: cover;
     text-align: center;
     height: var(--pagedjs-pagebox-height);
     max-width: 100%;
   }
-
+  
+  @page no-margin-layout {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    @top-right {
+      content: none;
+    }
+    
+    @top-right-corner {
+      content: none;
+    }
+    
+    @top-left-corner {
+      content: none;
+    }
+    
+    @top-left {
+      content: none;
+    }
+  }
+  
+  .img-double-page-left {
+    object-fit: cover;
+    text-align: right;
+    height: var(--pagedjs-pagebox-height);
+    max-width: 100%;
+    break-before:left;
+  }
+  
+  .img-double-page-right {
+    object-fit: cover;
+    text-align: left;
+    height: var(--pagedjs-pagebox-height);
+    max-width: 100%;  
+  }
+  
   #img_01 {
     width: 80%;
     height: 80%;
@@ -142,6 +152,8 @@
     margin-right: auto;
     font-family: "IBM Plex Sans Light";
   }
+
+
 
 
   /*------------------------------------MARGIN NOTES STYLE---------------------------*/
