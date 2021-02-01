@@ -228,16 +228,22 @@
 
   h3 {
     font-size: 16pt;
-    margin-top: 10mm ;
+    margin-top: 10mm;
     margin-bottom: 10mm;
   }
 
-  .biblio-list > li {
+  .biblio-list>li {
     font-family: "IBM Plex Mono";
     color: black;
     text-decoration: none;
     font-size: 11pt;
     line-height: 170%;
+  }
+
+  .biblio-list {
+    /* a remplacer eventuellement par icone custom */
+    list-style-type: circle;
+    list-style-image: url("../../img/arrow.svg");
   }
 
   a {
@@ -246,4 +252,61 @@
     text-decoration: none;
     font-size: 11pt;
     line-height: 170%;
+
+    /* permet d'éviter d'overflow en dehors de la page pour les liens.
+    a remplacer éventuellemet par des <br> manuels pour soigner les retours */
+    word-wrap: break-word;
+  }
+
+  /*------------------------------------MERCI---------------------------*/
+
+  .merci {
+    page: merci-layout;
+    break-before: right;
+  }
+
+  @page merci-layout {
+
+    margin-right: 20mm;
+    margin-left: 90mm;
+    margin-top: 100mm;
+    margin-bottom: 65px;
+
+    @top-right {
+      content: none;
+    }
+
+    @top-left {
+      content: none;
+    }
+
+  }
+
+  /*------------------------------------ACHEVE---------------------------*/
+
+  .acheve {
+    page: acheve-layout;
+    break-before: left;
+  }
+
+  @page acheve-layout {
+
+
+
+    margin-right: 20mm;
+    margin-left: 20mm;
+    margin-top: 180mm;
+    margin-bottom: 65px;
+
+    @top-right {
+      content: none;
+    }
+
+    @top-left {
+      content: none;
+    }
+  }
+
+  #mentions {
+    text-align: center;
   }
