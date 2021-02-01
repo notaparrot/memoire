@@ -100,45 +100,45 @@
     height: var(--pagedjs-pagebox-height);
     max-width: 100%;
   }
-  
+
   @page no-margin-layout {
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    
+
     @top-right {
       content: none;
     }
-    
+
     @top-right-corner {
       content: none;
     }
-    
+
     @top-left-corner {
       content: none;
     }
-    
+
     @top-left {
       content: none;
     }
   }
-  
+
   .img-double-page-left {
     object-fit: cover;
     text-align: right;
     height: var(--pagedjs-pagebox-height);
     max-width: 100%;
-    break-before:left;
+    break-before: left;
   }
-  
+
   .img-double-page-right {
     object-fit: cover;
     text-align: left;
     height: var(--pagedjs-pagebox-height);
-    max-width: 100%;  
+    max-width: 100%;
   }
-  
+
   #img_01 {
     width: 80%;
     height: 80%;
@@ -184,23 +184,66 @@
   #table-of-content {
     page: no-margin-layout;
   }
-  
-  ul {
+
+  #table-list {
     list-style-type: none;
     padding-left: 30mm;
     padding-right: 20mm;
     padding-top: 40mm;
   }
-  
-  li>a {
+
+  #table-list>li>a {
     font-family: "IBM Plex Mono SemiBold";
     color: black;
     text-decoration: none;
     font-size: 14pt;
     line-height: 170%;
   }
-  
-  li ::after {
-    content:target-counter(attr(href), page);
+
+  #table-list>li ::after {
+    content: target-counter(attr(href), page);
     float: right;
+  }
+
+  /*------------------------------------BIBLIOGRAPHIE---------------------------*/
+
+  .biblio {
+    page: biblio-layout;
+  }
+
+  @page biblio-layout {
+    margin-left: 20mm;
+    margin-right: 20mm;
+    margin-top: 100px;
+    margin-bottom: 65px;
+
+    @top-right {
+      content: none;
+    }
+
+    @top-left {
+      content: none;
+    }
+  }
+
+  h3 {
+    font-size: 16pt;
+    margin-top: 10mm ;
+    margin-bottom: 10mm;
+  }
+
+  .biblio-list > li {
+    font-family: "IBM Plex Mono";
+    color: black;
+    text-decoration: none;
+    font-size: 11pt;
+    line-height: 170%;
+  }
+
+  a {
+    font-family: "IBM Plex Mono ExtraLight";
+    color: black;
+    text-decoration: none;
+    font-size: 11pt;
+    line-height: 170%;
   }
