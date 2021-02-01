@@ -19,6 +19,40 @@
 
   }
 
+  /*------------------------------------TITRES DU LIVRE---------------------------*/
+
+  #titre {
+    font-family: "IBM Plex Mono SemiBold";
+    text-align: center;
+  }
+
+  #splash {
+    page: splash-layout;
+  }
+
+  @page splash-layout {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 160px;
+    margin-bottom: 0px;
+
+    @top-right {
+      content: none;
+    }
+
+    @top-right-corner {
+      content: none;
+    }
+
+    @top-left-corner {
+      content: none;
+    }
+
+    @top-left {
+      content: none;
+    }
+  }
+
   /*------------------------------------TITRES DE CHAPITRES---------------------------*/
 
   .chapter h1 {
@@ -160,20 +194,22 @@
 
   .margin-note {
     font-family: "IBM Plex Sans Light";
-    font-size: 12pt;
-    line-height: 14px;
-    text-align: left;
+    font-size: 10pt;
+    text-align: center;
     color: #2aa700;
     padding-top: 3px;
     margin-bottom: 14px;
-    padding-left: 18mm;
+    padding-left: 5mm;
     padding-right: 3mm;
   }
 
   .note-call_margin-note {
     font-family: "IBM Plex Sans Light";
     color: #2aa700;
-    font-size: 12pt;
+    /* positionne chiffre en petit + en haut de la ligne */
+    font-size: 7pt;
+    position: relative;
+    bottom: 5px;
   }
 
   .note-marker_margin-note {
@@ -183,6 +219,7 @@
   /*------------------------------------TABLE OF CONTENT---------------------------*/
   #table-of-content {
     page: no-margin-layout;
+    break-before: right;
   }
 
   #table-list {
@@ -193,7 +230,7 @@
   }
 
   #table-list>li>a {
-    font-family: "IBM Plex Mono SemiBold";
+    font-family: "IBM Plex Mono";
     color: black;
     text-decoration: none;
     font-size: 14pt;
@@ -279,6 +316,15 @@
     @top-left {
       content: none;
     }
+    
+    @top-left-corner {
+      content: none;
+    }
+
+  }
+
+  #remerciement {
+    font-family: "IBM Plex Mono";
 
   }
 
@@ -302,6 +348,10 @@
       content: none;
     }
 
+    @top-right-corner {
+      content: none;
+    }
+
     @top-left {
       content: none;
     }
@@ -309,4 +359,5 @@
 
   #mentions {
     text-align: center;
+    font-family: "IBM Plex Mono";
   }
