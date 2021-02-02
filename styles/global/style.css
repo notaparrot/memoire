@@ -25,8 +25,14 @@
   /*------------------------------------TITRES DU LIVRE---------------------------*/
 
   #titre {
-    font-family: "IBM Plex Mono SemiBold";
-    text-align: center;
+    font-family: "IBM Plex Sans SemiBold";
+    text-align: right;
+  }
+
+  #sous-titre {
+    font-family: "IBM Plex Sans Medium";
+    text-align: right;
+
   }
 
   #splash {
@@ -35,8 +41,8 @@
 
   @page splash-layout {
     margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 160px;
+    margin-right: 50px;
+    margin-top: 190px;
     margin-bottom: 0px;
 
     @top-right {
@@ -178,6 +184,16 @@
     #img_08{
       width: 80%;
       margin-top: -10mm;
+    }
+
+    #img_10{
+      width:60%;
+    }
+
+    #img_09{
+      /* inverse de la règle normale pour image pleine page */
+      width: var(--pagedjs-pagebox-width);
+      max-height: 100%;
     }
   .img-full-page {
     page: no-margin-layout;
