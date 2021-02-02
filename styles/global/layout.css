@@ -109,6 +109,6 @@
   }
 
   p {
-    hyphens: auto;
+    hyphens: manual;
   }
 }

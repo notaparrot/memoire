@@ -1,24 +1,27 @@
-  :root {
-    font-size: 16px;
+:root {
+  font-size: 16px;
     --baseline: 22px;
   }
-
+  
   @media screen {
     body {
       max-width: 70vw;
       padding-left: 10vw;
     }
   }
-
+  
   * {
     line-height: 22px;
     margin: 0;
     padding: 0;
     word-break: keep-all;
     font-family: "IBM Plex Sans Light";
-
+    
   }
-
+  
+  .break-p {
+    break-before: always;
+  }
   /*------------------------------------TITRES DU LIVRE---------------------------*/
 
   #titre {
@@ -110,31 +113,9 @@
     /* padding-top: 80px; */
   }
 
-  .break-cite {
-    break-before: always;
-  }
 
-  .after-cite {
-    break-before: always;
-  }
 
   /*------------------------------------IMAGES---------------------------*/
-  .img-in-text {
-    /* différence de marge gauche pour centrer l'image. A comparer aux marges declarées dans layout.css */
-    margin-left: -10mm;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
-  }
-
-  .img-full-page {
-    page: no-margin-layout;
-    object-fit: cover;
-    text-align: center;
-    height: var(--pagedjs-pagebox-height);
-    max-width: 100%;
-  }
-
   @page no-margin-layout {
     margin-left: 0px;
     margin-right: 0px;
@@ -158,6 +139,55 @@
     }
   }
 
+  .img-in-text {
+    /* différence de marge gauche pour centrer l'image. A comparer aux marges declarées dans layout.css */
+    margin-left: -35mm;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 20px;
+
+    max-width: 140mm;
+    height:auto;
+  }
+  
+    #img_01 {
+      width: 70%;
+      height: 70%;
+    }
+  
+    #img_03 {
+      break-before: always;
+      margin-top: -20px;
+    }
+
+    #img_05{
+      width: 70%;
+      margin-top: -10mm;
+
+    }
+    #img_06{
+      width: 70%;
+      margin-top: -10mm;
+
+    }
+
+    #img_07{
+      width: 80%;
+      margin-top: -10mm;
+    }
+    #img_08{
+      width: 80%;
+      margin-top: -10mm;
+    }
+  .img-full-page {
+    page: no-margin-layout;
+    object-fit: cover;
+    text-align: center;
+    height: var(--pagedjs-pagebox-height);
+    max-width: 100%;
+  }
+
+
   .img-double-page-left {
     object-fit: cover;
     text-align: right;
@@ -173,18 +203,16 @@
     max-width: 100%;
   }
 
-  #img_01 {
-    width: 80%;
-    height: 80%;
-  }
-
   .description {
     /* style de la description */
     text-align: right;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    font-family: "IBM Plex Sans Light";
+
+    /* le texte en italique ne semble pas prendre en compte font-weight */
+    font-family: "IBM Plex Sans";
+    font-weight: 200;
   }
 
 
@@ -360,4 +388,5 @@
   #mentions {
     text-align: center;
     font-family: "IBM Plex Mono";
+    font-size: 10pt;
   }
