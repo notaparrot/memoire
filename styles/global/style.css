@@ -239,11 +239,11 @@
   .margin-note {
     font-family: "IBM Plex Sans Light";
     font-size: 10pt;
-    text-align: center;
+    text-align: right;
     color: #2aa700;
     padding-top: 3px;
     margin-bottom: 14px;
-    padding-left: 5mm;
+    padding-left: 12mm;
     padding-right: 3mm;
   }
 
