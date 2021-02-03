@@ -232,7 +232,7 @@ p {
   text-align: right;
   display: block;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; 
 
   /* le texte en italique ne semble pas prendre en compte font-weight */
   font-family: "IBM Plex Sans";
