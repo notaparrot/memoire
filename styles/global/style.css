@@ -237,6 +237,7 @@ p {
   /* le texte en italique ne semble pas prendre en compte font-weight */
   font-family: "IBM Plex Sans";
   font-weight: 200;
+  font-size:11pt;
 }
 
 
