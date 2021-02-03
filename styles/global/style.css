@@ -1,89 +1,90 @@
 :root {
   font-size: 16px;
-    --baseline: 22px;
+  --baseline: 22px;
+}
+
+@media screen {
+  body {
+    max-width: 70vw;
+    padding-left: 10vw;
   }
-  
-  @media screen {
-    body {
-      max-width: 70vw;
-      padding-left: 10vw;
-    }
-  }
-  
-  * {
-    line-height: 22px;
-    margin: 0;
-    padding: 0;
-    word-break: keep-all;
-    font-family: "IBM Plex Sans Light";
-    
-  }
-  
-  .break-p {
-    break-before: always;
-  }
-  /*------------------------------------TITRES DU LIVRE---------------------------*/
+}
 
-  #titre {
-    font-family: "IBM Plex Sans SemiBold";
-    text-align: right;
-  }
+* {
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  font-family: "IBM Plex Sans Light";
 
-  #sous-titre {
-    font-family: "IBM Plex Sans Medium";
-    text-align: right;
+}
 
-  }
+.break-p {
+  break-before: always;
+}
 
-  #splash {
-    page: splash-layout;
-  }
+/*------------------------------------TITRES DU LIVRE---------------------------*/
 
-  @page splash-layout {
-    margin-left: 0px;
-    margin-right: 50px;
-    margin-top: 190px;
-    margin-bottom: 0px;
+#titre {
+  font-family: "IBM Plex Sans SemiBold";
+  text-align: right;
+}
 
-    @top-right {
-      content: none;
-    }
+#sous-titre {
+  font-family: "IBM Plex Sans Medium";
+  text-align: right;
 
-    @top-right-corner {
-      content: none;
-    }
+}
 
-    @top-left-corner {
-      content: none;
-    }
+#splash {
+  page: splash-layout;
+}
 
-    @top-left {
-      content: none;
-    }
+@page splash-layout {
+  margin-left: 0px;
+  margin-right: 50px;
+  margin-top: 190px;
+  margin-bottom: 0px;
+
+  @top-right {
+    content: none;
   }
 
-  /*------------------------------------TITRES DE CHAPITRES---------------------------*/
-
-  .chapter h1 {
-
-    font-family: "IBM Plex Sans SemiBold";
-    font-size: 28pt;
-    line-height: 95%;
-    margin-bottom: 12px;
-    margin-top: calc(var(--baseline)*6);
-    margin-bottom: calc(var(--baseline)*2);
-
-    margin-left: -70px;
+  @top-right-corner {
+    content: none;
   }
 
-  /* Définit une variable pour récupérer les noms de chapitres */
-  h1 {
-    string-set: title content(text);
+  @top-left-corner {
+    content: none;
   }
 
-  /* Cette partie est à décommenter pour supprimer les titres miniatures
+  @top-left {
+    content: none;
+  }
+}
+
+/*------------------------------------TITRES DE CHAPITRES---------------------------*/
+
+.chapter h1 {
+
+  font-family: "IBM Plex Sans SemiBold";
+  font-size: 28pt;
+  line-height: 95%;
+  margin-bottom: 12px;
+  margin-top: calc(var(--baseline)*6);
+  margin-bottom: calc(var(--baseline)*2);
+
+  margin-left: -70px;
+}
+
+/* Définit une variable pour récupérer les noms de chapitres */
+h1 {
+  string-set: title content(text);
+}
+
+/* Cette partie est à décommenter pour supprimer les titres miniatures
   Ne fonctionne pas dans l'etat actuel à cause des break-before .chapter h1 // voir layout.css */
-  /* section > h1{
+/* section > h1{
     page: no-top-title;
   }
   @page no-top-title {
@@ -92,319 +93,327 @@
     }
   } */
 
-  /*------------------------------------CORPS DE TEXTE---------------------------*/
+/*------------------------------------CORPS DE TEXTE---------------------------*/
 
-  p {
-    text-align: left;
-    margin-bottom: 3mm;
+p {
+  text-align: left;
+  margin-bottom: 3mm;
 
-    font-size: 13pt;
-    font-family: "IBM Plex Sans";
+  font-size: 13pt;
+  font-family: "IBM Plex Sans";
 
-    text-indent: 20px;
+  text-indent: 20px;
+}
+
+/*------------------------------------CITATIONS---------------------------*/
+
+.cite {
+  font-family: "IBM Plex Mono Light";
+  letter-spacing: -0.05em;
+  font-style: italic;
+  /* ces marges visent à centrer la citation sur la page. relatif aux marges générales */
+  margin-left: -10mm;
+  margin-right: 15mm;
+
+  /* Ceci est un test de mise en page de citation */
+  /* break-before: always; */
+  /* padding-top: 80px; */
+}
+
+
+
+/*------------------------------------IMAGES---------------------------*/
+@page no-margin-layout {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  @top-right {
+    content: none;
   }
 
-  /*------------------------------------CITATIONS---------------------------*/
-
-  .cite {
-    font-family: "IBM Plex Mono Light";
-    letter-spacing: -0.05em;
-    font-style: italic;
-    /* ces marges visent à centrer la citation sur la page. relatif aux marges générales */
-    margin-left: -10mm;
-    margin-right: 15mm;
-
-    /* Ceci est un test de mise en page de citation */
-    /* break-before: always; */
-    /* padding-top: 80px; */
+  @top-right-corner {
+    content: none;
   }
 
-
-
-  /*------------------------------------IMAGES---------------------------*/
-  @page no-margin-layout {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-
-    @top-right {
-      content: none;
-    }
-
-    @top-right-corner {
-      content: none;
-    }
-
-    @top-left-corner {
-      content: none;
-    }
-
-    @top-left {
-      content: none;
-    }
+  @top-left-corner {
+    content: none;
   }
 
-  .img-in-text {
-    /* différence de marge gauche pour centrer l'image. A comparer aux marges declarées dans layout.css */
-    margin-left: -35mm;
-    text-align: center;
-    padding-top: 35px;
-    padding-bottom: 20px;
-
-    max-width: 140mm;
-    height:auto;
+  @top-left {
+    content: none;
   }
-  
-    #img_01 {
-      width: 70%;
-      height: 70%;
-    }
-  
-    #img_03 {
-      break-before: always;
-      margin-top: -20px;
-    }
+}
 
-    #img_05{
-      width: 70%;
-      margin-top: -10mm;
+.img-in-text {
+  /* différence de marge gauche pour centrer l'image. A comparer aux marges declarées dans layout.css */
+  margin-left: -35mm;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 20px;
 
-    }
-    #img_06{
-      width: 70%;
-      margin-top: -10mm;
+  max-width: 140mm;
+  height: auto;
+}
 
-    }
+#img_01 {
+  width: 70%;
+  height: 70%;
+}
 
-    #img_07{
-      width: 80%;
-      margin-top: -10mm;
-    }
-    #img_08{
-      width: 80%;
-      margin-top: -10mm;
-    }
+#img_03 {
+  break-before: always;
+  margin-top: -20px;
+}
 
-    #img_10{
-      width:60%;
-    }
+#img_05 {
+  width: 70%;
+  margin-top: -10mm;
 
-    #img_09{
-      /* inverse de la règle normale pour image pleine page */
-      width: var(--pagedjs-pagebox-width);
-      max-height: 100%;
-    }
-  .img-full-page {
-    page: no-margin-layout;
-    object-fit: cover;
-    text-align: center;
-    height: var(--pagedjs-pagebox-height);
-    max-width: 100%;
-  }
+}
 
+#img_06 {
+  width: 70%;
+  margin-top: -10mm;
 
-  .img-double-page-left {
-    object-fit: cover;
-    text-align: right;
-    height: var(--pagedjs-pagebox-height);
-    max-width: 100%;
-    break-before: left;
-  }
+}
 
-  .img-double-page-right {
-    object-fit: cover;
-    text-align: left;
-    height: var(--pagedjs-pagebox-height);
-    max-width: 100%;
-  }
+#img_07 {
+  width: 80%;
+  margin-top: -10mm;
+}
 
-  .description {
-    /* style de la description */
-    text-align: right;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#img_08 {
+  width: 80%;
+  margin-top: -10mm;
+}
 
-    /* le texte en italique ne semble pas prendre en compte font-weight */
-    font-family: "IBM Plex Sans";
-    font-weight: 200;
-  }
+#img_09 {
+  /* inverse de la règle normale pour image pleine page */
+  width: var(--pagedjs-pagebox-width);
+  max-height: 100%;
+}
+
+#img_10 {
+  width: 60%;
+}
+
+#img_12 {
+  width: 80%;
+}
+
+.img-full-page {
+  page: no-margin-layout;
+  object-fit: cover;
+  text-align: center;
+  height: var(--pagedjs-pagebox-height);
+  max-width: 100%;
+}
 
 
+.img-double-page-left {
+  object-fit: cover;
+  text-align: right;
+  height: var(--pagedjs-pagebox-height);
+  max-width: 100%;
+  break-before: left;
+}
+
+.img-double-page-right {
+  object-fit: cover;
+  text-align: left;
+  height: var(--pagedjs-pagebox-height);
+  max-width: 100%;
+}
+
+.description {
+  /* style de la description */
+  text-align: right;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* le texte en italique ne semble pas prendre en compte font-weight */
+  font-family: "IBM Plex Sans";
+  font-weight: 200;
+}
 
 
-  /*------------------------------------MARGIN NOTES STYLE---------------------------*/
 
-  .margin-note {
-    font-family: "IBM Plex Sans Light";
-    font-size: 10pt;
-    text-align: right;
-    color: #2aa700;
-    padding-top: 3px;
-    margin-bottom: 14px;
-    padding-left: 12mm;
-    padding-right: 3mm;
-  }
 
-  .note-call_margin-note {
-    font-family: "IBM Plex Sans Light";
-    color: #2aa700;
-    /* positionne chiffre en petit + en haut de la ligne */
-    font-size: 7pt;
-    position: relative;
-    bottom: 5px;
-  }
+/*------------------------------------MARGIN NOTES STYLE---------------------------*/
 
-  .note-marker_margin-note {
-    font-family: "IBM Plex Sans Light";
-  }
+.margin-note {
+  font-family: "IBM Plex Sans Light";
+  font-size: 10pt;
+  text-align: right;
+  color: #2aa700;
+  padding-top: 3px;
+  margin-bottom: 14px;
+  padding-left: 12mm;
+  padding-right: 3mm;
+  line-height: 13pt + 22px;
+}
 
-  /*------------------------------------TABLE OF CONTENT---------------------------*/
-  #table-of-content {
-    page: no-margin-layout;
-    break-before: right;
-  }
+.note-call_margin-note {
+  font-family: "IBM Plex Sans Light";
+  color: #2aa700;
+  /* positionne chiffre en petit + en haut de la ligne */
+  font-size: 7pt;
+  position: relative;
+  bottom: 5px;
+}
 
-  #table-list {
-    list-style-type: none;
-    padding-left: 30mm;
-    padding-right: 20mm;
-    padding-top: 40mm;
-  }
+.note-marker_margin-note {
+  font-family: "IBM Plex Sans Light";
+}
 
-  #table-list>li>a {
-    font-family: "IBM Plex Mono";
-    color: black;
-    text-decoration: none;
-    font-size: 14pt;
-    line-height: 170%;
-  }
+/*------------------------------------TABLE OF CONTENT---------------------------*/
+#table-of-content {
+  page: no-margin-layout;
+  break-before: right;
+}
 
-  #table-list>li ::after {
-    content: target-counter(attr(href), page);
-    float: right;
-  }
+#table-list {
+  list-style-type: none;
+  padding-left: 30mm;
+  padding-right: 20mm;
+  padding-top: 40mm;
+}
 
-  /*------------------------------------BIBLIOGRAPHIE---------------------------*/
+#table-list>li>a {
+  font-family: "IBM Plex Mono";
+  color: black;
+  text-decoration: none;
+  font-size: 14pt;
+  line-height: 170%;
+}
 
-  .biblio {
-    page: biblio-layout;
-    break-before: left;
+#table-list>li ::after {
+  content: target-counter(attr(href), page);
+  float: right;
+}
 
-  }
+/*------------------------------------BIBLIOGRAPHIE---------------------------*/
 
-  @page biblio-layout {
-    margin-left: 20mm;
-    margin-right: 20mm;
-    margin-top: 100px;
-    margin-bottom: 65px;
+.biblio {
+  page: biblio-layout;
+  break-before: left;
 
-    @top-right {
-      content: none;
-    }
+}
 
-    @top-left {
-      content: none;
-    }
-  }
+@page biblio-layout {
+  margin-left: 20mm;
+  margin-right: 20mm;
+  margin-top: 100px;
+  margin-bottom: 65px;
 
-  h3 {
-    font-size: 16pt;
-    margin-top: 10mm;
-    margin-bottom: 10mm;
-  }
-
-  .biblio-list>li {
-    font-family: "IBM Plex Mono";
-    color: black;
-    text-decoration: none;
-    font-size: 11pt;
-    line-height: 170%;
+  @top-right {
+    content: none;
   }
 
-  .biblio-list {
-    /* a remplacer eventuellement par icone custom */
-    list-style-type: circle;
-    list-style-image: url("../../img/arrow.svg");
+  @top-left {
+    content: none;
   }
+}
 
-  a {
-    font-family: "IBM Plex Mono ExtraLight";
-    color: black;
-    text-decoration: none;
-    font-size: 11pt;
-    line-height: 170%;
+h3 {
+  font-size: 16pt;
+  margin-top: 10mm;
+  margin-bottom: 10mm;
+}
 
-    /* permet d'éviter d'overflow en dehors de la page pour les liens.
+.biblio-list>li {
+  font-family: "IBM Plex Mono";
+  color: black;
+  text-decoration: none;
+  font-size: 11pt;
+  line-height: 170%;
+}
+
+.biblio-list {
+  /* a remplacer eventuellement par icone custom */
+  list-style-type: circle;
+  list-style-image: url("../../img/arrow.svg");
+}
+
+a {
+  font-family: "IBM Plex Mono ExtraLight";
+  color: black;
+  text-decoration: none;
+  font-size: 11pt;
+  line-height: 170%;
+
+  /* permet d'éviter d'overflow en dehors de la page pour les liens.
     a remplacer éventuellemet par des <br> manuels pour soigner les retours */
-    word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/*------------------------------------MERCI---------------------------*/
+
+.merci {
+  page: merci-layout;
+  break-before: right;
+}
+
+@page merci-layout {
+
+  margin-right: 20mm;
+  margin-left: 90mm;
+  margin-top: 100mm;
+  margin-bottom: 65px;
+
+  @top-right {
+    content: none;
   }
 
-  /*------------------------------------MERCI---------------------------*/
-
-  .merci {
-    page: merci-layout;
-    break-before: right;
+  @top-left {
+    content: none;
   }
 
-  @page merci-layout {
-
-    margin-right: 20mm;
-    margin-left: 90mm;
-    margin-top: 100mm;
-    margin-bottom: 65px;
-
-    @top-right {
-      content: none;
-    }
-
-    @top-left {
-      content: none;
-    }
-    
-    @top-left-corner {
-      content: none;
-    }
-
+  @top-left-corner {
+    content: none;
   }
 
-  #remerciement {
-    font-family: "IBM Plex Mono";
+}
 
+#remerciement {
+  font-family: "IBM Plex Mono";
+
+}
+
+/*------------------------------------ACHEVE---------------------------*/
+
+.acheve {
+  page: acheve-layout;
+  break-before: left;
+}
+
+@page acheve-layout {
+
+
+
+  margin-right: 20mm;
+  margin-left: 20mm;
+  margin-top: 180mm;
+  margin-bottom: 65px;
+
+  @top-right {
+    content: none;
   }
 
-  /*------------------------------------ACHEVE---------------------------*/
-
-  .acheve {
-    page: acheve-layout;
-    break-before: left;
+  @top-right-corner {
+    content: none;
   }
 
-  @page acheve-layout {
-
-
-
-    margin-right: 20mm;
-    margin-left: 20mm;
-    margin-top: 180mm;
-    margin-bottom: 65px;
-
-    @top-right {
-      content: none;
-    }
-
-    @top-right-corner {
-      content: none;
-    }
-
-    @top-left {
-      content: none;
-    }
+  @top-left {
+    content: none;
   }
+}
 
-  #mentions {
-    text-align: center;
-    font-family: "IBM Plex Mono";
-    font-size: 10pt;
-  }
+#mentions {
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 10pt;
+}
