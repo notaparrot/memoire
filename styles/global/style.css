@@ -290,6 +290,8 @@
 
   .biblio {
     page: biblio-layout;
+    break-before: left;
+
   }
 
   @page biblio-layout {
