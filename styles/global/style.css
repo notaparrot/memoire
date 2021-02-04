@@ -12,6 +12,7 @@
 
 * {
   line-height: 22px;
+  /* line-height:15.6pt; */
   margin: 0;
   padding: 0;
   word-break: keep-all;
@@ -64,7 +65,6 @@
 }
 
 /*------------------------------------TITRES DE CHAPITRES---------------------------*/
-
 .chapter h1 {
 
   font-family: "IBM Plex Sans SemiBold";
@@ -102,6 +102,10 @@ p {
   font-size: 13pt;
   font-family: "IBM Plex Sans";
 }
+.tab { 
+  display: inline-block; 
+  margin-left: 40px; 
+} 
 
 /*------------------------------------CITATIONS---------------------------*/
 
@@ -201,6 +205,15 @@ p {
   width: 80%;
 }
 
+#img_14{
+  width:60%;
+}
+
+#img_15{
+  margin-top: -10mm;
+  width: 85%;
+}
+
 .img-full-page {
   page: no-margin-layout;
   object-fit: cover;
@@ -245,14 +258,16 @@ p {
 
 .margin-note {
   font-family: "IBM Plex Sans Light";
-  font-size: 10pt;
+  font-size: 11pt;
   text-align: left;
   color: #2aa700;
   padding-top: 3px;
   margin-bottom: 14px;
   padding-left: 12mm;
   padding-right: 3mm;
-  line-height: 22px;
+  /* line-height: 22px; */
+  /* line-height: 15.6pt; */
+  
 }
 
 .note-call_margin-note {
@@ -272,6 +287,7 @@ p {
 #table-of-content {
   page: no-margin-layout;
   break-before: right;
+  break-after:always;
 }
 
 #table-list {
@@ -400,7 +416,7 @@ a {
 
   margin-right: 20mm;
   margin-left: 20mm;
-  margin-top: 180mm;
+  margin-top: 160mm;
   margin-bottom: 65px;
 
   @top-right {
@@ -416,7 +432,7 @@ a {
   }
 }
 
-#mentions {
+.mentions {
   text-align: center;
   font-family: "IBM Plex Mono";
   font-size: 10pt;
@@ -424,7 +440,19 @@ a {
 
 /*------------------------------------REMOVE FOLIO ON BLANK PAGES---------------------------*/
 
-.blank-after {
+.blank-rep {
   break-before: left;
   page: blank;
+}
+
+/* fix pour ce bug étrange en face de la page d'intro */
+#intro {
+  font-family: "IBM Plex Sans SemiBold";
+  font-size: 28pt;
+  line-height: 95%;
+  margin-bottom: 12px;
+  margin-top: calc(var(--baseline)*6);
+  margin-bottom: calc(var(--baseline)*2);
+
+  margin-left: -70px;
 }
