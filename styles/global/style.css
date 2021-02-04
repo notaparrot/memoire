@@ -101,8 +101,6 @@ p {
 
   font-size: 13pt;
   font-family: "IBM Plex Sans";
-
-  text-indent: 20px;
 }
 
 /*------------------------------------CITATIONS---------------------------*/
@@ -168,13 +166,13 @@ p {
 }
 
 #img_05 {
-  width: 70%;
+  width: 65%;
   margin-top: -10mm;
 
 }
 
 #img_06 {
-  width: 70%;
+  width: 65%;
   margin-top: -10mm;
 
 }
@@ -196,7 +194,7 @@ p {
 }
 
 #img_10 {
-  width: 60%;
+  width: 50%;
 }
 
 #img_12 {
@@ -229,7 +227,7 @@ p {
 
 .description {
   /* style de la description */
-  text-align: right;
+  text-align: left;
   display: block;
   margin-left: auto;
   margin-right: auto; 
@@ -248,13 +246,13 @@ p {
 .margin-note {
   font-family: "IBM Plex Sans Light";
   font-size: 10pt;
-  text-align: right;
+  text-align: left;
   color: #2aa700;
   padding-top: 3px;
   margin-bottom: 14px;
   padding-left: 12mm;
   padding-right: 3mm;
-  line-height: 13pt + 22px;
+  line-height: 22px;
 }
 
 .note-call_margin-note {
@@ -287,7 +285,7 @@ p {
   font-family: "IBM Plex Mono";
   color: black;
   text-decoration: none;
-  font-size: 14pt;
+  font-size: 12pt;
   line-height: 170%;
 }
 
@@ -310,13 +308,18 @@ p {
   margin-top: 100px;
   margin-bottom: 65px;
 
-  @top-right {
-    content: none;
-  }
-
   @top-left {
     content: none;
   }
+
+  @top-right {
+    content: none;
+  }
+}
+@page biblio-layout :right{
+ @top-left-corner {
+   margin-left: 0mm;
+ } 
 }
 
 h3 {
@@ -417,4 +420,11 @@ a {
   text-align: center;
   font-family: "IBM Plex Mono";
   font-size: 10pt;
+}
+
+/*------------------------------------REMOVE FOLIO ON BLANK PAGES---------------------------*/
+
+.blank-after {
+  break-before: left;
+  page: blank;
 }

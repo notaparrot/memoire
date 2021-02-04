@@ -6,8 +6,8 @@
     margin-top: 100px;
     margin-bottom: 65px;
 
-    bleed: 6mm;
     marks: crop cross;
+    bleed: 6mm;
   }
 
 
@@ -25,7 +25,7 @@
       content: counter(page);
       vertical-align: top;
       padding-top: 25px;
-      font-size: 13pt;
+      font-size: 11pt;
       /* décale par rapport à la marge gauche */
       margin-left: -35mm;
     }
@@ -36,7 +36,7 @@
       vertical-align: top;
       padding-top: 25px;
       padding-left: 25px;
-      font-size: 13pt;
+      font-size: 11pt;
       /* décale par rapport à la marge gauche */
       margin-left: -35mm;
     }
@@ -53,7 +53,7 @@
       vertical-align: top;
       padding-top: 25px;
       float: right;
-      font-size: 13pt;
+      font-size: 11pt;
     }
 
     /* titre haut de page */
@@ -62,17 +62,17 @@
       vertical-align: top;
       padding-top: 25px;
       padding-right: 25px;   
-      font-size: 13pt;
+      font-size: 11pt;
     }
   }
 
 
   /* saut de pages */
   /* attention, cette partie peut porter à confusion ! */
-  section {
+  /* section {
     break-after:always;
-  }
-
+  } */
+  
   .chapter h1{
     break-before: right;
   }

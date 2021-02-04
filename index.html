@@ -9,13 +9,15 @@
 </head>
 
 <body>
+  <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+  <script src="marginNotes.js"></script>
 
   <section id="splash">
     <h1 id="titre">La simplicité et l'écran</h1>
     <h2 id="sous-titre">un sous-titre ?</h2>
   </section>
 
-  <section id="table-of-content">
+ <section id="table-of-content">
     <ul id="table-list">
       <li><a href="#intro">Introduction</a></li>
       <li><a href="#first">Origines de l’interface</a></li>
@@ -30,6 +32,10 @@
   </section>
 
   <section class="chapter" data-chapter="0">
+
+    <!--<div class="blank-rep"></div>-->
+    <!-- pour une raison obscure rajouter cette div de page blanche pour l'intro fait sauter une double page -->
+
     <h1 id="intro">Introduction</h1>
     <p>S’il y a bien un terme que l’industrie numérique revendique systématiquement, c’est celui-ci : simplicité.</p>
     <p>
@@ -81,8 +87,10 @@
       l’histoire du design d’interface. Dans un second temps, nous émettrons une critique de cette philosophie.</p>
   </section>
 
-
+  
   <section class="chapter" data-chapter="1">
+    <div class="blank-rep"></div>
+
     <h1 id="first">Origines de l’interface</h1>
 
     <p>Augmentation Research Center, Stanford Research Institute, année 68. Douglas Engelbart et son équipe présentent
@@ -105,9 +113,9 @@
 
     <div class="img-in-text">
       <img src="./img/chapter1/NLSinterface.jpg" id="img_01" />
-      <p class="description">Vidéo-conférence sur le NLS, 1968.</p>
     </div>
-
+    <p class="description">Vidéo-conférence sur le NLS, 1968.</p>
+    
     <p class="break-p cite">
       « Dans une telle relation future de travail entre l’appareil à résoudre les problèmes humains et l’ordinateur
       agissant comme un valet, l’aptitude de l’ordinateur à exécuter des processus mathématiques serait utilisée pour
@@ -213,12 +221,12 @@
     </div>
     <div class="img-in-text">
       <img src="./img/chapter1/xerox-star-8010-11.jpg" id="img_06" />
-      <p class="description">Haut : WYSIWYG, Xerox Star<br> Bas : Environnement de bureau du Xerox
-        Star</p>
     </div>
+    <p class="description">Haut : WYSIWYG, Xerox Star<br> Bas : Environnement de bureau du Xerox Star</p>
   </section>
-
+  
   <section class="chapter" data-chapter="2">
+    <div class="blank-rep"></div>
     <h1 id="second">La simplicité se vend bien</h1>
 
     <p>Si aujourd’hui un terme résonne dans tous les discours des entrepreneurs de la Silicon Valley, c’est bien
@@ -253,9 +261,9 @@
     </div>
     <div class="img-in-text">
       <img src="./img/chapter2/susanKareCut.jpg" id="img_08" />
-      <p class="description">Haut : Environnement de bureau du Macintosh<br>Bas : Icônes de Susan Kare</p>
     </div>
-
+    <p class="description">Haut : Environnement de bureau du Macintosh<br>Bas : Icônes de Susan Kare</p>
+    
     <img src="./img/chapter2/brochureMacintosh.jpg" class="img-full-page" id="img_09" />
     <p class="description">Ci-contre : Extrait d'une brochure du lancement du Macintosh</p>
 
@@ -297,8 +305,8 @@
 
     <div class="img-in-text">
       <img src="./img/chapter2/iphone.jpg" id="img_10" />
-      <p class="description">iPhone, l'interface graphique prend le dessus.</p>
     </div>
+    <p class="description">iPhone, l'interface graphique prend le dessus.</p>
 
     <p>L’autre acteur majeur de la conception de système d’exploitation pour smartphones, est tout autant préoccupé par
       la facilité d’utilisation de ses produits. En 2014, Google annonçait son Material Design. Il est décrit comme « un
@@ -363,8 +371,7 @@
       qu’elles renferment.</p>
 
   </section>
-  <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
-  <script src="marginNotes.js"></script>
+
 
   <section class="chapter" data-chapter="3">
     <h1 id="third">Dissimuler</h1>
@@ -407,8 +414,9 @@
     </p>
 
     <img src="img/chapter3/installBlender.png" class="img-full-page" id="img_13">
+    <p class="description break-p">Différents procédés d'installation du logiciel Blender<br>OSX, Windows, Linux</p>
      
-      <p class="break-p">
+      <p>
         
       Car la réalité de la grande partie d’utilisateurs s’arrête aux représentations que leur montrent leurs écrans,
       l’interface graphique. Nous pouvons d’ailleurs reprocher aux concepteurs de systèmes d’exploitation comme
@@ -512,8 +520,8 @@
 
       <div class="img-in-text">
         <img src="/img/chapter4/wix1.png" id="img_12">
-        <p class="description">Aperçu du créateur de sites web sans code wix.</p>
       </div>
+      <p class="description">Aperçu du créateur de sites web sans code wix.</p>
 
     <p class="break-p">Si les outils de conceptions sans codes sont développés par des entreprises avec le désir d’être manipulable sans
       connaissances préalables, il est paradoxal d’imaginer pouvoir « créer » en ne manipulant qu’un assemblage
@@ -651,7 +659,7 @@
         Si l’influence de ces acteurs ne contraint pas à créer une interface selon leurs règles, ne pas les suivre,
         c’est
         développer un objet marginal, susceptible de déstabiliser un potentiel utilisateur.</p>
-      <p>Il est problématique de laisser seul ce petit groupe d’acteurs puissant laisser influencer à ce point le
+      <p>Il est problématique de laisser seul ce petit groupe d’acteurs puissants laisser influencer à ce point le
         paysage
         du design d’interface. À l’heure où les scandales liés aux abus de ces groupes se multiplient (surveillance
         intrusive, monétisations des données, verrouillages matériels et logiciels empêchant la possibilité de
