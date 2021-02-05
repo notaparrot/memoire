@@ -192,9 +192,7 @@ p {
 }
 
 #img_09 {
-  /* inverse de la règle normale pour image pleine page */
-  width: var(--pagedjs-pagebox-width);
-  max-height: 100%;
+  max-height: 110%;
 }
 
 #img_10 {
@@ -215,15 +213,24 @@ p {
 }
 
 .img-full-page {
+  position:absolute;
+  display: block;
+  margin:auto;
+  max-width: 103%;
+  max-height: 103%;
+}
+.over-full{
   page: no-margin-layout;
-  object-fit: cover;
-  text-align: center;
-  height: var(--pagedjs-pagebox-height);
-  max-width: 100%;
+  break-before: always;
+  width: 177mm;
+  height:227mm;
+  display:flex;
+  justify-content:center;
+  align-items:center; 
 }
 
-
-.img-double-page-left {
+/* a garder au cas où l'impression de la double page décale, mais ça devrait le faire */
+/* .img-double-page-left {
   object-fit: cover;
   text-align: right;
   height: var(--pagedjs-pagebox-height);
@@ -236,7 +243,7 @@ p {
   text-align: left;
   height: var(--pagedjs-pagebox-height);
   max-width: 100%;
-}
+} */
 
 .description {
   /* style de la description */
