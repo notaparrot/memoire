@@ -111,7 +111,6 @@ p {
 
 .cite {
   font-family: "IBM Plex Mono Light";
-  letter-spacing: -0.05em;
   font-style: italic;
   /* ces marges visent à centrer la citation sur la page. relatif aux marges générales */
   margin-left: -10mm;
@@ -281,9 +280,7 @@ p {
   font-family: "IBM Plex Sans Light";
   color: #2aa700;
   /* positionne chiffre en petit + en haut de la ligne */
-  font-size: 7pt;
-  position: relative;
-  bottom: 5px;
+  font-size: 13pt;
 }
 
 .note-marker_margin-note {

@@ -58,7 +58,7 @@
 
     /* titre haut de page */
     @top-right {
-      content: "La simplicité et l'écran";
+      content: "La simplicité et l’écran";
       vertical-align: top;
       padding-top: 25px;
       padding-right: 25px;   
@@ -99,6 +99,18 @@
     
     @top-right {
       content: none;
+    }
+  }
+
+  @page:nth(4){
+    @top-right-corner {
+      visibility:hidden;
+    }
+
+    /* titre haut de page */
+    @top-right {
+      visibility:hidden;
+      
     }
   }
 
