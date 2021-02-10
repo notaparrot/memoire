@@ -115,7 +115,7 @@ p {
   /* ces marges visent à centrer la citation sur la page. relatif aux marges générales */
   margin-left: -10mm;
   margin-right: 15mm;
-
+  font-size: 11pt;
   /* Ceci est un test de mise en page de citation */
   /* break-before: always; */
   /* padding-top: 80px; */
