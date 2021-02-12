@@ -121,6 +121,10 @@
   }
 
   p {
-    hyphens: manual;
+    hyphens: auto;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
   }
 }

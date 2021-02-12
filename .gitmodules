@@ -1,0 +1,3 @@
+[submodule "Hyphenopoly"]
+	path = Hyphenopoly
+	url = https://github.com/mnater/Hyphenopoly
