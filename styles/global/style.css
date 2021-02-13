@@ -82,16 +82,13 @@ h1 {
   string-set: title content(text);
 }
 
-/* Cette partie est à décommenter pour supprimer les titres miniatures
-  Ne fonctionne pas dans l'etat actuel à cause des break-before .chapter h1 // voir layout.css */
-/* section > h1{
-    page: no-top-title;
-  }
-  @page no-top-title {
-    @top-left {
-      content: none;
-    }
-  } */
+#note-sur-la {
+  font-size: 22pt;
+}
+
+.une-note {
+  break-before: right;
+}
 
 /*------------------------------------CORPS DE TEXTE---------------------------*/
 

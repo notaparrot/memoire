@@ -11,7 +11,11 @@ var Hyphenopoly = {
             "*":{
                 minWordlength: 7,
                 orphanControl: 2
-            }
+            },
+            ".cite":{
+                minWordlength: 8,
+                orphanControl: 2
+            },
         },
         paths: {
             patterndir: "Hyphenopoly/patterns/",
