@@ -49,9 +49,11 @@
 
     /* folio */
     @top-right-corner {
+      position:relative;
       content: counter(page);
       vertical-align: top;
       padding-top: 25px;
+      margin-right: 55mm;
       float: right;
       font-size: 11pt;
     }
