@@ -150,7 +150,6 @@ p {
   text-align: center;
   padding-top: 35px;
   padding-bottom: 20px;
-
   max-width: 140mm;
   height: auto;
 }
@@ -163,6 +162,7 @@ p {
 #img_03 {
   break-before: always;
   margin-top: -20px;
+  width: 100%;
 }
 
 #img_05 {
