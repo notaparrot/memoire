@@ -161,7 +161,7 @@ p {
 
 #img_03 {
   break-before: always;
-  margin-top: -20px;
+  margin-top: 5mm;
   width: 100%;
 }
 
@@ -320,12 +320,23 @@ margin-top: 100mm;
   float: right;
 }
 
+/*------------------------------------TABLE OF CONTENT---------------------------*/
+
+#dnsep {
+  page:acheve-layout;
+  break-before: left;
+}
+
+#empty{
+  page:blank;
+  break-before:left;
+}
+
 /*------------------------------------BIBLIOGRAPHIE---------------------------*/
 
 .biblio {
   page: biblio-layout;
   break-before: left;
-
 }
 
 @page biblio-layout {
