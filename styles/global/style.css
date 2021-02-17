@@ -253,13 +253,13 @@ margin-top: 100mm;
   /* style de la description */
   text-align: left;
   display: block;
-  margin-left: auto;
+  margin-left: -10mm;
   margin-right: auto; 
 
   /* le texte en italique ne semble pas prendre en compte font-weight */
   font-family: "IBM Plex Sans";
   font-weight: 200;
-  font-size:11pt;
+  font-size:9pt;
 }
 
 
@@ -290,6 +290,7 @@ margin-top: 100mm;
 
 .note-marker_margin-note {
   font-family: "IBM Plex Sans Light";
+  font-size: 11pt;
 }
 
 /*------------------------------------TABLE OF CONTENT---------------------------*/
