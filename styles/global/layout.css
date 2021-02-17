@@ -20,14 +20,15 @@
 
     /* folio */
 
-    @top-left-corner {
+    @top-right-corner {
       position:relative;
       content: counter(page);
       vertical-align: top;
       padding-top: 25px;
       font-size: 11pt;
-      /* décale par rapport à la marge gauche */
-      margin-left: -35mm;
+
+      text-align: right;
+      margin-right: 10mm;
     }
     
     @top-left {
@@ -48,14 +49,16 @@
     margin-right: 20mm;
 
     /* folio */
-    @top-right-corner {
+    @top-left-corner {
       position:relative;
       content: counter(page);
       vertical-align: top;
       padding-top: 25px;
-      margin-right: 55mm;
+      /* margin-right: 55mm; */
+      margin-left:10mm;
       float: right;
       font-size: 11pt;
+      text-align: left;
     }
 
     /* titre haut de page */
@@ -105,7 +108,7 @@
   }
 
   @page:nth(4){
-    @top-right-corner {
+    @top-left-corner {
       visibility:hidden;
     }
 

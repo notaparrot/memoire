@@ -402,7 +402,7 @@ a {
     content: none;
   }
 
-  @top-left-corner {
+  @top-right-corner {
     content: none;
   }
 
@@ -433,7 +433,7 @@ a {
     content: none;
   }
 
-  @top-right-corner {
+  @top-left-corner {
     content: none;
   }
 
@@ -453,16 +453,4 @@ a {
 .blank-rep {
   break-before: left;
   page: blank;
-}
-
-/* fix pour ce bug étrange en face de la page d'intro */
-#intro {
-  font-family: "IBM Plex Sans SemiBold";
-  font-size: 28pt;
-  line-height: 95%;
-  margin-bottom: 12px;
-  margin-top: calc(var(--baseline)*6);
-  margin-bottom: calc(var(--baseline)*2);
-
-  margin-left: -70px;
 }
