@@ -192,7 +192,15 @@ p {
   margin-top: -10mm;}
 
 #img_10 {
-  width: 50%;
+  width: 100%;
+  text-align: left;
+  margin-left: -88mm;
+  position: absolute;
+}
+
+#iphone_desc{
+  position: absolute;
+margin-top: 100mm;
 }
 
 #img_12 {
@@ -205,7 +213,7 @@ p {
 
 #img_15{
   margin-top: -10mm;
-  width: 85%;
+  width: 100%;
 }
 
 .img-full-page {
