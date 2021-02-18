@@ -335,16 +335,13 @@ margin-top: 100mm;
 /*------------------------------------BIBLIOGRAPHIE---------------------------*/
 
 .biblio {
-  page: biblio-layout;
+  /* page: biblio-layout; */
   break-before: left;
 }
 
-@page biblio-layout {
-  margin-left: 20mm;
-  margin-right: 20mm;
-  margin-top: 100px;
-  margin-bottom: 65px;
 
+/* A priori ce layout devient inutile */
+@page biblio-layout {
   @top-left {
     content: none;
   }
@@ -373,9 +370,12 @@ h3 {
   line-height: 170%;
 }
 
+.edition {
+  font-weight: 200;
+  font-family: "IBM Plex Mono";
+}
+
 .biblio-list {
-  /* a remplacer eventuellement par icone custom */
-  list-style-type: circle;
   list-style-image: url("../../img/arrow.svg");
 }
 
