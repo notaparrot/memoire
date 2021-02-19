@@ -269,12 +269,12 @@ margin-top: 100mm;
 
 .margin-note {
   font-family: "IBM Plex Sans Light";
-  font-size: 11pt;
+  font-size: 9pt;
   text-align: left;
   color: #2aa700;
   padding-top: 3px;
   margin-bottom: 14px;
-  padding-left: 12mm;
+  padding-left: 14mm;
   padding-right: 3mm;
   /* line-height: 22px; */
   /* line-height: 15.6pt; */
@@ -285,12 +285,13 @@ margin-top: 100mm;
   font-family: "IBM Plex Sans Light";
   color: #2aa700;
   /* positionne chiffre en petit + en haut de la ligne */
-  font-size: 13pt;
+  font-size: 9pt;
+  vertical-align: 11%;
 }
 
 .note-marker_margin-note {
   font-family: "IBM Plex Sans Light";
-  font-size: 11pt;
+  font-size: 9pt;
 }
 
 /*------------------------------------TABLE OF CONTENT---------------------------*/
