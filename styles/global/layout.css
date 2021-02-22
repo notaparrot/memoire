@@ -132,3 +132,78 @@
     -webkit-hyphens: auto;
   }
 }
+
+/*------------------------------------RETIRE TITRES COURANTS POUR CHAPITRE---------------------------*/
+
+/* il y a sans doute un moyen de faire cela plus proprement ! */
+@page:nth(9){
+  @top-left {
+    visibility:hidden;
+  }
+  @top-right {
+    visibility:hidden;
+  }
+}
+
+@page:nth(15){
+  @top-left {
+    visibility:hidden;
+  }
+  @top-right {
+    visibility:hidden;
+  }
+}
+
+@page:nth(29){
+  @top-left {
+    visibility:hidden;
+  }
+  @top-right {
+    visibility:hidden;
+  }
+}
+
+@page:nth(43){
+  @top-left {
+    visibility:hidden;
+  }
+  @top-right {
+    visibility:hidden;
+  }
+}
+
+@page:nth(53){
+  @top-left {
+    visibility:hidden;
+  }
+  @top-right {
+    visibility:hidden;
+  }
+}
+
+@page:nth(65){
+  @top-left {
+    visibility:hidden;
+  }
+  @top-right {
+    visibility:hidden;
+  }
+}
+
+@page:nth(75){
+  @top-left {
+    visibility:hidden;
+  }
+  @top-right {
+    visibility:hidden;
+  }
+}
+
+@page:nth(83){
+  @top-left {
+    visibility:hidden;
+  }
+  @top-right {
+    visibility:hidden;
+  }
+}

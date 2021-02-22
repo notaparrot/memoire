@@ -77,6 +77,10 @@
   margin-left: -70px;
 }
 
+h2 {
+  font-size: 16pt;
+}
+
 /* Définit une variable pour récupérer les noms de chapitres */
 h1 {
   string-set: title content(text);
@@ -208,6 +212,8 @@ p {
 margin-top: 100mm;
 }
 
+
+
 #img_12 {
   width: 80%;
 }
@@ -275,7 +281,9 @@ margin-top: 100mm;
   font-size:9pt;
 }
 
-
+#description_material {
+  text-align: right;
+}
 
 
 /*------------------------------------MARGIN NOTES STYLE---------------------------*/
@@ -349,12 +357,12 @@ margin-top: 100mm;
 /*------------------------------------BIBLIOGRAPHIE---------------------------*/
 
 .biblio {
-  /* page: biblio-layout; */
+  page: biblio-layout;
   break-before: left;
 }
 
 
-/* A priori ce layout devient inutile */
+/* Efface titre livre + section pour la biblio */
 @page biblio-layout {
   @top-left {
     content: none;
@@ -363,11 +371,6 @@ margin-top: 100mm;
   @top-right {
     content: none;
   }
-}
-@page biblio-layout :right{
- @top-left-corner {
-   margin-left: 0mm;
- } 
 }
 
 h3 {
