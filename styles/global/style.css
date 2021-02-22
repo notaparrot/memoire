@@ -223,6 +223,14 @@ margin-top: 100mm;
   max-width: 103%;
   max-height: 103%;
 }
+
+#description-double {
+  position: absolute;
+  top: 200mm;
+  left: 30mm;
+  color: white;
+  z-index: 1000;
+}
 .over-full{
   page: no-margin-layout;
   break-before: always;
