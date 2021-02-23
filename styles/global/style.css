@@ -192,7 +192,7 @@ p {
 }
 
 #img_des {
-  width: 100%;
+  width: 80%;
   margin-top: -10mm;
 }
 
@@ -219,6 +219,7 @@ margin-top: 100mm;
 }
 
 #img_14{
+  margin-top: -7mm;
   width:60%;
 }
 
