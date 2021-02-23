@@ -192,7 +192,7 @@ p {
 }
 
 #img_des {
-  width: 80%;
+  width: 100%;
   margin-top: -10mm;
 }
 
@@ -293,7 +293,7 @@ margin-top: 100mm;
   font-family: "IBM Plex Sans Light";
   font-size: 9pt;
   text-align: left;
-  color: #63b87dff;
+  color: #63b87d;
   padding-top: 3px;
   margin-bottom: 14px;
   padding-left: 14mm;
@@ -305,7 +305,7 @@ margin-top: 100mm;
 
 .note-call_margin-note {
   font-family: "IBM Plex Sans Light";
-  color: #63b87dff;
+  color: #63b87d;
   /* positionne chiffre en petit + en haut de la ligne */
   font-size: 9pt;
   vertical-align: 11%;
