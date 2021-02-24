@@ -81,6 +81,13 @@ h2 {
   font-size: 16pt;
 }
 
+#name {
+  margin-top: 10mm;
+  font-size: 14pt;
+  font-family: "IBM Plex Sans Medium";
+  text-align: right;
+}
+
 /* Définit une variable pour récupérer les noms de chapitres */
 h1 {
   string-set: title content(text);
@@ -215,7 +222,7 @@ margin-top: 100mm;
 
 
 #img_12 {
-  width: 80%;
+  width: 110%;
 }
 
 #img_14{
@@ -439,8 +446,8 @@ a {
 
 #remerciement {
   font-family: "IBM Plex Mono";
-
 }
+
 
 /*------------------------------------ACHEVE---------------------------*/
 

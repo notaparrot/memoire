@@ -1,8 +1,9 @@
-# pagedjs_boilerplate_fork
+# pagedjs La simplicité et l'écran
 
 # serveur http
 python -m http.server
-
 # autres 
 live-server 
-parcel# memoire
+
+# font
+https://www.ibm.com/plex/
